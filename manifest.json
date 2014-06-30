@@ -1,20 +1,22 @@
 {
-  "name": "Screensharing Sample",
-  "description": "Screensharing utility sample for getscreenmedia",
-  "version": "0.0.1",
+  "name": "1click.io",
+  "description": "1click ScreenSharing Extension",
+  "version": "1.0.2",
   "manifest_version": 2,
   "minimum_chrome_version": "34",
   "icons": {
+  	"16": "favicon.png",
+  	"128": "logo.png"
   },
   "permissions": [
-    "desktopCapture",
-    "activeTab"
+    "desktopCapture"
   ],
   "background": {
     "scripts": ["background.js"]
   },
   "content_scripts": [ {
     "js": [ "content.js" ],
-    "matches": [ "https://*/*" ]
+    "matches": [ "https://*/*"]
   }]
+
 }

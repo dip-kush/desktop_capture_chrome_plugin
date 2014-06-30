@@ -7,7 +7,6 @@ chrome.runtime.onConnect.addListener(function (channel) {
                                                                    channel.sender.tab, function (streamid) {
                 // communicate this string to the app so it can call getUserMedia with it
                 message.type = 'gotScreen';
-                console.log("i am here");
                 message.sourceId = streamid;
                 channel.postMessage(message);
             });
@@ -24,3 +23,7 @@ chrome.runtime.onConnect.addListener(function (channel) {
         }
     });
 });
+
+var isInstalledNode = document.createElement('div');
+isInstalledNode.id = 'extension-is-installed';
+document.body.appendChild(isInstalledNode);

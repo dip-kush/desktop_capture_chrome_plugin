@@ -12,3 +12,7 @@ window.addEventListener('message', function (event) {
         return;
     channel.postMessage(event.data);
 });
+
+var isInstalledNode = document.createElement('div');
+isInstalledNode.id = '1click-ext-installed';
+document.body.appendChild(isInstalledNode);
